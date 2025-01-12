@@ -36,12 +36,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 上传整个仓库内容作为 Artifact
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'  # 上传整个项目根目录
-
       # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
