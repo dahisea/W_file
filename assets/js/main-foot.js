@@ -38,8 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
-}); <
-/script><script>
+}); 
 async function fetchAPI() {
     try {
         const response = await fetch('https://capi.dahi.eu.org/whour');
