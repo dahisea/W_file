@@ -207,13 +207,6 @@ function formatData(data) {
 
     return `
         <div class="data-section">
-            <h3>${t.connection_info}</h3>
-            <p class="text-xs text-neutral-500 dark:text-neutral-400">
-                ${t.protocol}: ${connectionInfo.protocol}<br>
-                ${t.hostname}: ${connectionInfo.hostname}<br>
-                ${t.pathname}: ${connectionInfo.pathname}<br>
-                ${t.method}: ${connectionInfo.method}
-            </p>
 
             <h3>${t.cf_info}</h3>
             <p class="text-xs text-neutral-500 dark:text-neutral-400">
