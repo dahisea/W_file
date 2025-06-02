@@ -16,4 +16,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@main
+        
+      - uses: actions/upload-pages-artifact@main
+        with:
+          path: '.'
+
       - uses: actions/deploy-pages@main
