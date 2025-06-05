@@ -6,7 +6,7 @@ function calculateTime() {
     const hours = Math.floor((timeDifference % (24 * 3600)) / 3600);
     const minutes = Math.floor((timeDifference % 3600) / 60);
     const seconds = Math.floor(timeDifference % 60);
-    document.getElementById("htmer_time").innerHTML = `${days}天 ${hours}时 ${minutes}分 ${seconds}秒`;
+    document.getElementById("htmer_time").innerHTML = `${days}天 ${hours}時 ${minutes}分 ${seconds}秒`;
 }
 setInterval(calculateTime, 1000);
 
@@ -14,7 +14,7 @@ async function fetchAPI() {
     try {
         const response = await fetch('https://capi.dahi.eu.org/whour');
         await new Promise(resolve => setTimeout(resolve, 2000));
-        if (!response.ok) throw new Error('网络响应错误 ' + response.statusText);
+        if (!response.ok) throw new Error('回應錯誤 ' + response.statusText);
         const data = await response.json();
         document.getElementById('api-data').innerHTML = formatData(data);
     } catch (error) {
@@ -23,7 +23,8 @@ async function fetchAPI() {
 }
 
 function getLang() {
-    return document.documentElement.lang || 'en';
+    const lang = document.documentElement.lang || 'zh-TW';
+    return translations[lang] ? lang : 'zh-TW'; 
 }
 
 const translations = {
